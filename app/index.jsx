@@ -85,8 +85,8 @@ export default function TodoApp() {
     );
   };
 
-  const onChangeTodo = (e) => {
-    setTodo(e.target.value);
+  const onChangeTodo = (text) => {
+    setTodo(text);
   };
 
   const handleAddTodo = () => {
@@ -129,7 +129,7 @@ export default function TodoApp() {
         <TextInput
           placeholder="Add todo"
           value={todo}
-          onChange={onChangeTodo}
+          onChangeText={onChangeTodo}
           style={styles.input}
         />
         <Pressable style={styles.button} onPress={handleAddTodo}>
@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
     padding: 10,
     width: "100%",
     fontSize: 20,
-    fontFamily: Inter_500Medium,
+    fontFamily: "Inter_500Medium",
   },
   button: {
     backgroundColor: "black",
